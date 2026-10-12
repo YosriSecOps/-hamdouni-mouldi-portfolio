@@ -1,0 +1,225 @@
+/* ==========================================================================
+   HAMDOUNI MOULDI - DESIGN SYSTEM & CORE STYLES
+   Visual Identity: Dark Forest Green, Antique Gold, Warm Cream, Editorial Serif
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800&family=Caveat:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --color-bg-deep: #07170f;
+  --color-bg-main: #0c2417;
+  --color-bg-surface: #123322;
+  --color-bg-card: #153a27;
+  --color-bg-card-hover: #194630;
+  
+  /* Gold Accents */
+  --color-gold: #c5a059;
+  --color-gold-light: #dfbc77;
+  --color-gold-dark: #9e7b36;
+  --color-gold-glow: rgba(197, 160, 89, 0.28);
+  
+  /* Cream / Light Theme for Results section */
+  --color-cream-bg: #f5f2ea;
+  --color-cream-surface: #ede7dc;
+  --color-cream-text: #11281c;
+  --color-cream-muted: #4e6355;
+  --color-cream-border: #dcd3c1;
+  
+  /* Text Colors - Pure crisp white for high contrast & clarity */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-text-faint: rgba(255, 255, 255, 0.88);
+  
+  /* Borders & Overlays */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(197, 160, 89, 0.4);
+  --border-card: rgba(197, 160, 89, 0.2);
+  --glass-bg: rgba(12, 36, 23, 0.75);
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: 'Caveat', cursive;
+  --font-arabic-heading: 'Amiri', serif;
+  --font-arabic-body: 'Cairo', sans-serif;
+
+  /* Spacing */
+  --container-max: 1240px;
+  --nav-height: 96px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.45);
+  --shadow-gold: 0 8px 30px rgba(197, 160, 89, 0.18);
+}
+
+/* RTL Support */
+html[dir="rtl"] {
+  --font-serif: 'Amiri', serif;
+  --font-sans: 'Cairo', sans-serif;
+}
+
+html[dir="rtl"] .script-note,
+html[dir="rtl"] .signature-text {
+  font-family: 'Amiri', serif;
+  font-style: italic;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--color-bg-deep);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+/* Section Header Styles */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.section-tag::before {
+  content: "—";
+  color: var(--color-gold-light);
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 600;
+  line-height: 1.18;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: #ffffff;
+}
+
+/* Pill Button Styles */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.btn-pill-dark {
+  background: rgba(9, 23, 15, 0.7);
+  color: #ffffff;
+  border: 1px solid var(--color-gold);
+  backdrop-filter: blur(8px);
+}
+
+.btn-pill-dark:hover {
+  background: var(--color-gold);
+  color: var(--color-bg-deep);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
+}
+
+.btn-pill-dark:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.btn-pill-light {
+  background: transparent;
+  color: var(--color-cream-text);
+  border: 1.5px solid var(--color-cream-text);
+}
+
+.btn-pill-light:hover {
+  background: var(--color-cream-text);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-pill-light:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.btn-arrow {
+  font-size: 1.15rem;
+  transition: transform var(--transition-fast);
+}
+
+html[dir="rtl"] .btn-arrow {
+  transform: rotate(180deg);
+}
+
+html[dir="rtl"] .btn-pill:hover .btn-arrow {
+  transform: rotate(180deg) translateX(4px);
+}

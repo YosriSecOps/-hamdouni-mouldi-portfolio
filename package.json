@@ -1,0 +1,19 @@
+{
+  "name": "hamdouni-mouldi-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio professionnel de Hamdouni Mouldi - Expert Agro-industriel & Ingénieur Général",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test_suite.js"
+  },
+  "keywords": [
+    "portfolio",
+    "agriculture",
+    "tunisie",
+    "agroalimentaire",
+    "mouldi-hamdouni"
+  ],
+  "author": "Hamdouni Mouldi",
+  "license": "ISC"
+}
