@@ -1588,10 +1588,10 @@ html[dir="rtl"] .contact-detail-value a[href^="tel:"] {
 }
 
 .metric-label {
-  font-size: 0.76rem;
-  color: var(--color-cream-muted);
-  line-height: 1.35;
-  font-weight: 500;
+  font-size: 0.8rem;
+  color: #000000;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
